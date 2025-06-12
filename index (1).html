@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المسار المتكامل لتحليل بيانات الموارد البشرية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f8fafc;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.8s ease-in-out;
+        }
+        .accordion-button.active .rotate-icon {
+            transform: rotate(180deg);
+        }
+        .module-header {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+        }
+        .advanced-module-header {
+             background: linear-gradient(135deg, #0f172a, #1e293b);
+        }
+        .lesson-group {
+            background-color: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+        }
+        .function-card {
+            border-top: 1px solid #f3f4f6;
+            padding-top: 1rem;
+            margin-top: 1rem;
+        }
+        .function-progression {
+            display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 2px dashed #e5e7eb; flex-wrap: wrap;
+        }
+        .function-progression .step {
+            background-color: #eef2ff; color: #4338ca; padding: 0.5rem 1rem; border-radius: 9999px; font-weight: 700; font-size: 1.1rem;
+        }
+        .function-progression .arrow { color: #9ca3af; font-weight: bold; font-size: 1.5rem; }
+        .code-container { direction: ltr; position: relative; margin-top: 0.5rem; }
+        code {
+            display: block; background-color: #1f2937; color: #dbeafe; padding: 1rem 1.25rem;
+            padding-left: 4rem; border-radius: 8px; font-family: 'Fira Code', monospace;
+            font-size: 0.95em; white-space: pre-wrap; word-break: break-all;
+        }
+        .copy-btn {
+            position: absolute; top: 50%; left: 0.75rem; transform: translateY(-50%); background-color: #374151;
+            color: #9ca3af; border: none; width: 38px; height: 38px; border-radius: 6px; cursor: pointer;
+            display: flex; align-items: center; justify-content: center; transition: all 0.2s;
+        }
+        h4, h5 { color: #1e3a8a; font-weight: 700; }
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.7);
+            display: flex; align-items: center; justify-content: center; z-index: 1000;
+            opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s;
+        }
+        .modal-overlay.active { opacity: 1; visibility: visible; }
+        .modal-content {
+            background: white; padding: 2rem; border-radius: 12px; max-width: 500px;
+            width: 90%; position: relative; transform: translateY(-20px); transition: transform 0.3s;
+        }
+        .modal-overlay.active .modal-content { transform: translateY(0); }
+        .modal-close-btn {
+            position: absolute; top: 1rem; left: 1rem; background: #f1f5f9; border: none;
+            width: 30px; height: 30px; border-radius: 50%; font-size: 1.2rem; cursor: pointer; color: #64748b;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+        
+        <header class="text-center mb-16">
+            <i class="fas fa-party-horn text-5xl text-blue-600 mb-4 animate-bounce"></i> 🎉
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-2">المسار المتكامل لتحليل بيانات الموارد البشرية</h1>
+            <p class="text-lg text-slate-600">رحلتك الممتعة من البيانات الأولية إلى لوحات الأداء التفاعلية 🚀</p>
+        </header>
+        
+        <h3 class="text-2xl font-bold text-slate-700 mb-4 border-r-4 border-blue-500 pr-4">المرحلة الأولى: بناء الأساس القوي 튼</h3>
+
+        <!-- Module 1: Conditional Summarization -->
+        <div class="bg-white rounded-lg shadow-lg mb-6">
+            <button class="accordion-button module-header w-full flex justify-between items-center p-6 text-right focus:outline-none rounded-t-lg">
+                <div class="flex items-center text-white"><span class="text-2xl font-bold ml-4">الوحدة 1</span><h2 class="text-xl font-bold">التلخيص المشروط: اجعل الأرقام تتكلم! 🗣️</h2></div><i class="fas fa-chevron-down rotate-icon transition-transform duration-300 text-white"></i>
+            </button>
+            <div class="accordion-content">
+                <div class="p-6 bg-slate-50 space-y-4">
+                    <div class="lesson-group">
+                        <h4 class="text-2xl mb-4">➕ عائلة الجمع: من البسيط إلى الخارق!</h4>
+                        <div class="function-card"><h5 class="text-xl font-bold">1. دالة SUM - الجمع المباشر</h5><p>🎯 <strong>المهمة:</strong> جمع كل الأرقام في نطاق محدد. بسيطة ومباشرة!</p><p>🏢 <strong>سيناريو عملي:</strong> تريد معرفة إجمالي ميزانية الرواتب لكل الموظفين. اجمع كل الأرقام في عمود الراتب.</p><div class="code-container"><code>=SUM(E:E)</code></div></div>
+                        <div class="function-card"><h5 class="text-xl font-bold">2. دالة SUMIF - الجمع الذكي بشرط واحد 🤔</h5><p>🎯 <strong>المهمة:</strong> جمع الأرقام التي تحقق **شرطًا واحدًا** فقط.</p><p>🏢 <strong>سيناريو عملي:</strong> حساب إجمالي رواتب الموظفين في "قسم المبيعات" فقط.</p><div class="code-container"><code>=SUMIF(C:C, "قسم المبيعات", E:E)</code></div></div>
+                        <div class="function-card"><h5 class="text-xl font-bold">3. دالة SUMIFS - البطل الخارق بشروط متعددة 🦸‍♂️</h5><p>🎯 <strong>المهمة:</strong> جمع الأرقام التي تحقق **عدة شروط معًا**.</p><p>🏢 <strong>سيناريو عملي:</strong> حساب إجمالي رواتب الموظفين في "قسم الهندسة" **وَ** الذين هم "دوام كامل".</p><div class="code-container"><code>=SUMIFS(E:E, C:C, "قسم الهندسة", D:D, "دوام كامل")</code></div></div>
+                        <div class="function-progression"><span class="step">SUM</span><span class="arrow">→</span><span class="step">SUMIF</span><span class="arrow">→</span><span class="step">SUMIFS</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Module 2: Logical Decisions -->
+        <div class="bg-white rounded-lg shadow-lg mb-6">
+             <button class="accordion-button module-header w-full flex justify-between items-center p-6 text-right focus:outline-none rounded-t-lg">
+                <div class="flex items-center text-white"><span class="text-2xl font-bold ml-4">الوحدة 2</span><h2 class="text-xl font-bold">اتخاذ القرارات المنطقية 🧠</h2></div><i class="fas fa-chevron-down rotate-icon transition-transform duration-300 text-white"></i>
+            </button>
+            <div class="accordion-content">
+                <div class="p-6 bg-slate-50 space-y-4">
+                     <div class="lesson-group">
+                        <h4 class="text-2xl mb-4">🚦 عائلة IF: تحكم في مسار بياناتك</h4>
+                         <div class="function-card"><h5 class="text-xl font-bold">1. دالة IF - صانعة القرار</h5><p>🎯 <strong>المهمة:</strong> تنفيذ إجراء معين إذا كان الشرط صحيحًا، وإجراء آخر إذا كان خاطئًا.</p><p>🏢 <strong>سيناريو عملي:</strong> تحديد أهلية الموظف لمكافأة الأداء. إذا كان تقييمه (في F2) أكبر أو يساوي 90، فهو "مستحق"، وإلا فهو "غير مستحق".</p><div class="code-container"><code>=IF(F2>=90, "مستحق", "غير مستحق")</code></div></div>
+                         <div class="function-card"><h5 class="text-xl font-bold">2. دالة IFS - القرارات المتعددة بسهولة ✅</h5><p>🎯 <strong>المهمة:</strong> فحص سلسلة من الشروط وإرجاع القيمة المقابلة لأول شرط صحيح.</p><p>🏢 <strong>سيناريو عملي:</strong> تصنيف الموظفين إلى فئات (ممتاز، جيد جدًا، جيد) بناءً على درجة التقييم.</p><div class="code-container"><code>=IFS(F2>=90, "ممتاز", F2>=80, "جيد جدًا", TRUE, "يحتاج تحسين")</code></div></div>
+                         <div class="function-card"><h5 class="text-xl font-bold">3. دمج IF مع AND/OR 💡</h5><p>🎯 <strong>المهمة:</strong> تقييم شروط مركبة. <strong>AND</strong> تتطلب تحقق كل الشروط، بينما <strong>OR</strong> تتطلب تحقق شرط واحد على الأقل.</p><p>🏢 <strong>سيناريو عملي:</strong> منح مكافأة خاصة فقط للموظفين في "قسم المبيعات" **وَ** الذين تجاوزت مبيعاتهم 100,000.</p><div class="code-container"><code>=IF(AND(C2="قسم المبيعات", H2>100000), "مكافأة خاصة", "-")</code></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Module 3: Lookups -->
+        <div class="bg-white rounded-lg shadow-lg mb-6">
+            <button class="accordion-button module-header w-full flex justify-between items-center p-6 text-right focus:outline-none rounded-t-lg">
+                <div class="flex items-center text-white"><span class="text-2xl font-bold ml-4">الوحدة 3</span><h2 class="text-xl font-bold">البحث وربط البيانات 🕵️‍♂️</h2></div><i class="fas fa-chevron-down rotate-icon transition-transform duration-300 text-white"></i>
+            </button>
+            <div class="accordion-content">
+                 <div class="p-6 bg-slate-50 space-y-4">
+                    <div class="lesson-group">
+                        <h4 class="text-2xl mb-4">🔍 عائلة البحث: من الكلاسيكي إلى الحديث</h4>
+                        <div class="function-card"><h5 class="text-xl font-bold">1. دالة VLOOKUP - الأداة الكلاسيكية</h5><p>🎯 <strong>المهمة:</strong> البحث عن قيمة في العمود الأول من جدول وإرجاع قيمة من عمود آخر في نفس الصف.</p><p>⚠️ <strong>قيودها:</strong> لا تستطيع البحث لليسار، وبطيئة مع البيانات الضخمة.</p></div>
+                        <div class="function-card"><h5 class="text-xl font-bold">2. INDEX & MATCH - الثنائي القوي</h5><p>🎯 <strong>المهمة:</strong> استخدام دالتين معًا لتجاوز قيود VLOOKUP. مرنة وتسمح بالبحث في أي اتجاه.</p></div>
+                        <div class="function-card"><h5 class="text-xl font-bold">3. دالة XLOOKUP - البطل الحديث 🚀</h5><p>🎯 <strong>المهمة:</strong> البحث عن قيمة وإرجاع نتيجة مقابلة. هي الأسهل والأقوى والأكثر مرونة.</p><p>🏢 <strong>سيناريو عملي:</strong> باستخدام الرقم الوظيفي لموظف (في G2)، ابحث عن بريده الإلكتروني (في العمود D) من جدول الموظفين (الرقم الوظيفي في العمود A).</p><div class="code-container"><code>=XLOOKUP(G2, A:A, D:D, "الموظف غير موجود")</code></div></div>
+                        <div class="function-progression"><span class="step">VLOOKUP</span><span class="arrow">→</span><span class="step">INDEX/MATCH</span><span class="arrow">→</span><span class="step">XLOOKUP</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Module 4: Dynamic Arrays -->
+        <div class="bg-white rounded-lg shadow-lg mb-6">
+            <button class="accordion-button module-header w-full flex justify-between items-center p-6 text-right focus:outline-none rounded-t-lg">
+                <div class="flex items-center text-white"><span class="text-2xl font-bold ml-4">الوحدة 4</span><h2 class="text-xl font-bold">الدوال الديناميكية 🌪️</h2></div><i class="fas fa-chevron-down rotate-icon transition-transform duration-300 text-white"></i>
+            </button>
+            <div class="accordion-content">
+                <div class="p-6 bg-slate-50 space-y-4">
+                    <div class="lesson-group">
+                        <h4 class="text-2xl mb-4">🌪️ دوال تغير قواعد اللعبة</h4>
+                        <p>هذه الدوال تنشئ قوائم تتحدث تلقائيًا عند تغير البيانات المصدر. وداعًا للنسخ واللصق اليدوي!</p>
+                        <div class="function-card"><h5 class="text-xl font-bold">1. دالة FILTER</h5><p>🎯 <strong>المهمة:</strong> إنشاء قائمة حية بالبيانات التي تطابق شرطك.</p><p>🏢 <strong>سيناريو عملي:</strong> إنشاء قائمة بكل الموظفين في "قسم تقنية المعلومات".</p><div class="code-container"><code>=FILTER(A2:E100, C2:C100="قسم تقنية المعلومات")</code></div></div>
+                        <div class="function-card"><h5 class="text-xl font-bold">2. دالة SORT</h5><p>🎯 <strong>المهمة:</strong> ترتيب قائمتك (غالبًا ما تكون ناتجة عن FILTER أو UNIQUE) أبجديًا أو رقميًا.</p></div>
+                        <div class="function-card"><h5 class="text-xl font-bold">3. دالة UNIQUE</h5><p>🎯 <strong>المهمة:</strong> استخراج قائمة فريدة من نوعها من نطاق به تكرارات.</p><p>🏢 <strong>سيناريو عملي:</strong> الحصول على قائمة بكل الأقسام أو المسميات الوظيفية في الشركة دون تكرار.</p></div>
+                        <div class="function-card"><h5 class="text-xl font-bold">🔥 دمج القوة:</h5><p>لإنشاء قائمة فريدة ومرتبة بأسماء الموظفين في قسم معين:</p><div class="code-container"><code>=SORT(UNIQUE(FILTER(B:B, C:C="قسم تقنية المعلومات")))</code></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <hr class="my-16 border-slate-300">
+        
+        <h3 class="text-2xl font-bold text-slate-700 mb-4 border-r-4 border-amber-500 pr-4">المرحلة الثانية: الانطلاق نحو الاحتراف 🚀</h3>
+
+        <!-- Module 5: Visualization -->
+        <div class="bg-white rounded-lg shadow-xl mb-8">
+            <button class="accordion-button advanced-module-header w-full flex justify-between items-center p-6 text-right focus:outline-none rounded-t-lg">
+                <div class="flex items-center text-white"><i class="fas fa-chart-pie text-xl ml-4"></i><h2 class="text-xl font-bold">الوحدة 5: التصور البياني ولوحات المعلومات 🎨</h2></div><i class="fas fa-chevron-down rotate-icon transition-transform duration-300 text-white"></i>
+            </button>
+            <div class="accordion-content">
+                <div class="p-6 bg-slate-100/50 space-y-6">
+                    <div class="lesson-group">
+                        <h4 class="text-xl">بناء لوحة معلومات تفاعلية باستخدام Slicers</h4>
+                        <p>الـ <strong>Slicers</strong> هي فلاتر مرئية تسمح لك وللمدراء بتصفية التقارير والرسوم البيانية بضغطة زر. الآن بعد أن أتقنت استخراج البيانات، حان وقت عرضها بطريقة تفاعلية ومقنعة.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Module 6: Automation -->
+        <div class="bg-white rounded-lg shadow-xl mb-8">
+            <button class="accordion-button advanced-module-header w-full flex justify-between items-center p-6 text-right focus:outline-none rounded-t-lg">
+                <div class="flex items-center text-white"><i class="fas fa-robot text-xl ml-4"></i><h2 class="text-xl font-bold">الوحدة 6: الأتمتة الكاملة مع Power Query 🤖</h2></div><i class="fas fa-chevron-down rotate-icon transition-transform duration-300 text-white"></i>
+            </button>
+            <div class="accordion-content">
+                 <div class="p-6 bg-slate-100/50 space-y-6">
+                    <div class="lesson-group">
+                        <h4 class="text-xl">لماذا Power Query هي الخطوة التالية الطبيعية؟</h4>
+                        <p>لأنها تقوم بأتمتة كل المهام المتكررة التي تعلمتها في الوحدات السابقة. بدلاً من إعادة كتابة الدوال كل شهر، ستقوم ببناء نظام يعمل بضغطة زر واحدة.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Module 7: Case Studies -->
+        <div class="bg-white rounded-lg shadow-xl mb-8">
+            <button class="accordion-button advanced-module-header w-full flex justify-between items-center p-6 text-right focus:outline-none rounded-t-lg">
+                <div class="flex items-center text-white"><i class="fas fa-vial-circle-check text-xl ml-4"></i><h2 class="text-xl font-bold">الوحدة 7: دراسات حالة من واقع العمل 🕵️‍♀️</h2></div><i class="fas fa-chevron-down rotate-icon transition-transform duration-300 text-white"></i>
+            </button>
+            <div class="accordion-content">
+                <div class="p-6 bg-slate-100/50 space-y-6">
+                    <div class="lesson-group">
+                        <h4 class="text-xl"><i class="fas fa-magnifying-glass-chart"></i> دراسة حالة: تحليل أسباب دوران الموظفين</h4>
+                        <p><strong>التحدي:</strong> تطبيق مهاراتك من الوحدات (1-5) لتحليل بيانات الموظفين المستقيلين وتقديم تقرير مرئي يوضح الأسباب للإدارة.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Resource Library -->
+        <div class="bg-slate-800 text-white rounded-lg shadow-xl p-8 text-center mt-16">
+            <i class="fas fa-treasure-chest text-4xl mb-4 text-yellow-300"></i>
+            <h2 class="text-3xl font-bold mb-4">كنز الموارد الاحترافية 💎</h2>
+            <p class="text-slate-300 mb-8">أدوات جاهزة لتسريع عملك وإبهار فريقك. (اضغط لتجربة!)</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <button data-resource="dashboards" class="resource-btn bg-blue-600 hover:bg-blue-700 rounded-lg p-6 transform hover:scale-105 transition-transform"><h4 class="font-bold text-lg text-white">📊 قوالب لوحات معلومات</h4></button>
+                <button data-resource="kpis" class="resource-btn bg-blue-600 hover:bg-blue-700 rounded-lg p-6 transform hover:scale-105 transition-transform"><h4 class="font-bold text-lg text-white">🎯 ملف مؤشرات الأداء (KPIs)</h4></button>
+                <button data-resource="data" class="resource-btn bg-blue-600 hover:bg-blue-700 rounded-lg p-6 transform hover:scale-105 transition-transform"><h4 class="font-bold text-lg text-white">💾 بيانات تدريبية إضافية</h4></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modal" class="modal-overlay"><div class="modal-content text-center"><button id="modal-close" class="modal-close-btn">&times;</button><div id="modal-icon" class="text-4xl mb-4"></div><h3 id="modal-title" class="text-2xl font-bold text-slate-800 mb-2"></h3><p id="modal-description" class="text-slate-600 mb-6"></p><button class="bg-green-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-green-600 transition-colors"><i class="fas fa-download mr-2"></i> تحميل الآن</button></div></div>
+
+    <script>
+        document.querySelectorAll('.accordion-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const isActive = button.classList.contains('active');
+                document.querySelectorAll('.accordion-button.active').forEach(b => { if (b !== button) { b.classList.remove('active'); b.nextElementSibling.style.maxHeight = null; } });
+                button.classList.toggle('active');
+                const accordionContent = button.nextElementSibling;
+                if (button.classList.contains('active')) { accordionContent.style.maxHeight = accordionContent.scrollHeight + "px"; } else { accordionContent.style.maxHeight = null; }
+            });
+        });
+        document.querySelectorAll('.copy-btn').forEach(btn => { btn.addEventListener('click', (e) => { e.stopPropagation(); const codeText = btn.parentElement.querySelector('code').textContent; navigator.clipboard.writeText(codeText); }); });
+        const resourceButtons = document.querySelectorAll('.resource-btn'), modal = document.getElementById('modal'), modalCloseBtn = document.getElementById('modal-close'), modalIcon = document.getElementById('modal-icon'), modalTitle = document.getElementById('modal-title'), modalDescription = document.getElementById('modal-description');
+        const resourcesContent = { dashboards: { icon: '📊', title: 'قوالب لوحات معلومات', description: 'مجموعة من قوالب إكسل الجاهزة لعرض بيانات الموارد البشرية بشكل احترافي وجذاب. فقط أضف بياناتك وشاهد السحر!' }, kpis: { icon: '🎯', title: 'ملف مؤشرات الأداء (KPIs)', description: 'دليل شامل لأهم مؤشرات الأداء في الموارد البشرية، مع شرح لكل مؤشر وكيفية حسابه باستخدام دوال إكسل لتقييم الأداء بدقة.' }, data: { icon: '💾', title: 'بيانات تدريبية إضافية', description: 'مجموعات بيانات متنوعة ومختلفة تحاكي الواقع لتتمكن من مواصلة التدريب، صقل مهاراتك، وتجربة تحديات تحليلية جديدة.' } };
+        resourceButtons.forEach(button => { button.addEventListener('click', () => { const resourceId = button.dataset.resource, content = resourcesContent[resourceId]; modalIcon.textContent = content.icon; modalTitle.textContent = content.title; modalDescription.textContent = content.description; modal.classList.add('active'); }); });
+        const closeModal = () => { modal.classList.remove('active'); };
+        modalCloseBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (event) => { if (event.target === modal) { closeModal(); } });
+    </script>
+</body>
+</html>
+
